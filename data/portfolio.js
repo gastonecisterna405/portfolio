@@ -53,11 +53,13 @@ export const DATA = {
       degree:      'B.Eng. Nuclear Engineering',
       institution: 'Instituto Balseiro',
       detail:      'National merit scholarship',
+      url:         'https://www.ib.edu.ar/',
     },
     {
       degree:      'M.Sc. Nuclear Physics',
       institution: 'Erasmus Mundus NUCPHYS',
       detail:      'Spain · Italy · France',
+      url:         'https://www.emm-nucphys.eu/',
     },
     {
       degree:      'Law Degree (in progress)',

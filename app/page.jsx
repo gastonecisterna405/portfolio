@@ -58,11 +58,19 @@ function Experience() {
         <div className="education__grid">
           {DATA.education.map((item, i) => (
             <Reveal key={i} delay={i * 90}>
-              <div className="edu-card">
-                <p className="edu-card__degree">{item.degree}</p>
-                <p className="edu-card__institution">{item.institution}</p>
-                <p className="edu-card__detail">{item.detail}</p>
-              </div>
+              {item.url ? (
+                <a href={item.url} target="_blank" rel="noopener noreferrer" className="edu-card">
+                  <p className="edu-card__degree">{item.degree}</p>
+                  <p className="edu-card__institution">{item.institution}</p>
+                  <p className="edu-card__detail">{item.detail}</p>
+                </a>
+              ) : (
+                <div className="edu-card">
+                  <p className="edu-card__degree">{item.degree}</p>
+                  <p className="edu-card__institution">{item.institution}</p>
+                  <p className="edu-card__detail">{item.detail}</p>
+                </div>
+              )}
             </Reveal>
           ))}
         </div>
