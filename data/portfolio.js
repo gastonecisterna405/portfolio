@@ -12,10 +12,10 @@ export const DATA = {
     whatsapp:  'https://wa.me/34615330209',
   },
 
-  cv: null,
+  cv: '/cv.pdf',
 
   about: [
-    "I'm a nuclear engineer and physicist. That combination is not something I planned: it's the result of following each problem wherever it led.",
+    "I build machine learning systems and data tools for high-stakes industrial problems. My background is in nuclear engineering and physics, which means I approach data science from the simulation side: I care about what the model actually represents, not just whether the numbers fit.",
     "After graduating from Instituto Balseiro, I spent two years in the Erasmus Mundus NUCPHYS program across Spain, Italy, and France, then joined IFIC Valencia as a researcher. The work was radiation detection and machine learning: building tools to localize radioactive sources in real time. The three journal papers above came out of that.",
     "I'm currently a Senior Safety Analyst at AtkinsRéalis, developing deterministic safety solutions for clients in Canada and the UK. Energy regulation requires someone who understands both the reactor specs and the contract, which is why I'm finishing a law degree.",
     "The direction I'm working toward is energy economics, geopolitics, and the policy layer that connects technical decisions to political ones. I'm Italian-Argentine and operate between Europe and Latin America. Long game.",
@@ -92,10 +92,10 @@ export const DATA = {
 
   projects: [
     {
-      name:        'Global Nuclear Buildout Intelligence',
-      description: 'AI platform for forecasting reactor deployment and analyzing global nuclear buildout trends. Combines machine learning with strategic energy insights.',
-      stack:       ['Python', 'XGBoost', 'Streamlit', 'ML'],
-      github:      'https://github.com/gastonecisterna405/global-nuclear-buildout-intelligence',
+      name:        'Lead Scoring Mendoza',
+      description: 'Lead scoring and business analytics platform using Places API, machine learning, and data enrichment for commercial decision-making.',
+      stack:       ['Python', 'Streamlit', 'Google Places API', 'ML'],
+      github:      'https://github.com/gastonecisterna405/lead-scoring-mendoza',
       live:        null,
     },
     {
@@ -106,10 +106,10 @@ export const DATA = {
       live:        null,
     },
     {
-      name:        'Lead Scoring Mendoza',
-      description: 'Lead scoring and business analytics platform using Places API, machine learning, and data enrichment for commercial decision-making.',
-      stack:       ['Python', 'Streamlit', 'Google Places API', 'ML'],
-      github:      'https://github.com/gastonecisterna405/lead-scoring-mendoza',
+      name:        'Global Nuclear Buildout Intelligence',
+      description: 'AI platform for forecasting reactor deployment and analyzing global nuclear buildout trends. Combines machine learning with strategic energy insights.',
+      stack:       ['Python', 'XGBoost', 'Streamlit', 'ML'],
+      github:      'https://github.com/gastonecisterna405/global-nuclear-buildout-intelligence',
       live:        null,
     },
     {
@@ -120,6 +120,8 @@ export const DATA = {
       live:        'https://estudio-juridico-barrera.vercel.app/',
     },
   ],
+
+  contactIntro: 'Open to roles in applied AI, data science, and machine learning consulting. Focused on industrial and energy applications where domain knowledge makes the difference. Operating across Europe and Latin America.',
 
   writing: [
     {

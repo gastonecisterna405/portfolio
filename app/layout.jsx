@@ -51,21 +51,21 @@ const jsonLd = {
 
 export const metadata = {
   title: 'Gastón Cisterna',
-  description: 'Senior Deterministic Safety Analyst at AtkinsRéalis. Nuclear Engineer, Physicist, and Lawyer working at the intersection of reactor physics, data science, and energy policy.',
-  keywords: ['nuclear safety', 'deterministic safety analysis', 'CANDU', 'thermohydraulics', 'machine learning', 'energy policy', 'nuclear engineering'],
+  description: 'Applied AI and data science for energy and industrial decision-making. Nuclear Engineer, Physicist, and Lawyer building ML systems where simulation meets strategy.',
+  keywords: ['machine learning', 'applied AI', 'data science', 'energy analytics', 'nuclear engineering', 'ML consulting', 'simulation', 'Python'],
   authors: [{ name: 'Gastón Cisterna' }],
   icons: { icon: '/favicon.svg' },
   openGraph: {
     type: 'website',
-    title: 'Gastón Cisterna — Nuclear Safety · Law · Energy Policy',
-    description: 'Senior Deterministic Safety Analyst at AtkinsRéalis. Nuclear Engineer, Physicist, and Lawyer.',
+    title: 'Gastón Cisterna — Data, Simulation & Applied AI',
+    description: 'Applied AI and data science for energy and industrial decision-making. Nuclear Engineer, Physicist, and Lawyer.',
     url: 'https://gastoncisterna.dev',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary',
-    title: 'Gastón Cisterna — Nuclear Safety · Law · Energy Policy',
-    description: 'Senior Deterministic Safety Analyst at AtkinsRéalis. Nuclear Engineer, Physicist, and Lawyer.',
+    title: 'Gastón Cisterna — Data, Simulation & Applied AI',
+    description: 'Applied AI and data science for energy and industrial decision-making. Nuclear Engineer, Physicist, and Lawyer.',
   },
 }
 

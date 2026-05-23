@@ -1,95 +1,7 @@
-'use client'
-
-import { useState, useEffect } from 'react'
+import Nav    from '../components/Nav'
+import Hero   from '../components/Hero'
 import Reveal from '../components/Reveal'
-import { DATA, NAV } from '../data/portfolio'
-
-function scrollTo(id) {
-  const el = document.getElementById(id)
-  if (!el) return
-  const top = el.getBoundingClientRect().top + window.scrollY - 72
-  window.scrollTo({ top, behavior: 'smooth' })
-}
-
-// ─── NAV ──────────────────────────────────────────────────────────
-function Nav({ active, dark, onToggle }) {
-  const [open, setOpen] = useState(false)
-  return (
-    <nav className={`nav${open ? ' nav--open' : ''}`}>
-      <div className="nav__inner container">
-        <button className="nav__logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          G.C.
-        </button>
-        <ul className="nav__links">
-          {NAV.map(({ id, label }) => (
-            <li key={id}>
-              <a
-                href={`#${id}`}
-                className={`nav__link${active === id ? ' nav__link--active' : ''}`}
-                onClick={(e) => { e.preventDefault(); scrollTo(id) }}
-              >
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <div className="nav__actions">
-          <button className="nav__theme-btn" onClick={onToggle} aria-label="Toggle theme">
-            {dark ? '○' : '●'}
-          </button>
-          <button
-            className="nav__hamburger"
-            onClick={() => setOpen(o => !o)}
-            aria-label="Toggle menu"
-          >
-            <span /><span /><span />
-          </button>
-        </div>
-      </div>
-      {open && (
-        <div className="nav__mobile">
-          {NAV.map(({ id, label }) => (
-            <a
-              key={id}
-              href={`#${id}`}
-              className={`nav__mobile-link${active === id ? ' nav__link--active' : ''}`}
-              onClick={(e) => { e.preventDefault(); scrollTo(id); setOpen(false) }}
-            >
-              {label}
-            </a>
-          ))}
-        </div>
-      )}
-    </nav>
-  )
-}
-
-// ─── HERO ──────────────────────────────────────────────────────────
-function Hero() {
-  return (
-    <section className="hero" id="hero">
-      <div className="hero__inner container">
-        <div className="hero__content">
-          <p className="hero__eyebrow">{DATA.eyebrow}</p>
-          <h1 className="hero__name">{DATA.name}</h1>
-          <p className="hero__tagline">{DATA.tagline}</p>
-          <p className="hero__intro">{DATA.heroIntro}</p>
-          <div className="hero__ctas">
-            {DATA.cv && (
-              <a href={DATA.cv} className="btn btn--primary" download>Download CV</a>
-            )}
-            <button className="btn btn--ghost" onClick={() => scrollTo('projects')}>
-              View Projects ↓
-            </button>
-          </div>
-        </div>
-        <div className="hero__photo-wrap">
-          <img src="/photo.jpg" alt="Gastón Cisterna" className="hero__photo" />
-        </div>
-      </div>
-    </section>
-  )
-}
+import { DATA } from '../data/portfolio'
 
 // ─── SECTION HEADER ────────────────────────────────────────────────
 function SectionHeader({ title }) {
@@ -140,7 +52,6 @@ function Experience() {
             </Reveal>
           ))}
         </div>
-
         <Reveal>
           <h3 className="education__heading">Education</h3>
         </Reveal>
@@ -272,12 +183,15 @@ function Contact() {
       <div className="container">
         <SectionHeader title="Contact" />
         <Reveal>
-          <p className="contact__intro">
-            Open to roles in nuclear safety, energy policy, and research. Operating across Europe and Latin America.
-          </p>
+          <p className="contact__intro">{DATA.contactIntro}</p>
         </Reveal>
         <Reveal delay={100}>
           <div className="contact__links">
+            {DATA.cv && (
+              <a href={DATA.cv} className="contact__link" download>
+                Download CV ↗
+              </a>
+            )}
             {linkedin && (
               <a href={linkedin} target="_blank" rel="noopener noreferrer" className="contact__link">
                 LinkedIn ↗
@@ -314,30 +228,11 @@ function Footer() {
   )
 }
 
-// ─── PAGE ──────────────────────────────────────────────────────────
+// ─── PAGE (Server Component) ────────────────────────────────────────
 export default function Page() {
-  const [dark, setDark] = useState(true)
-  const [active, setActive] = useState('')
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light')
-  }, [dark])
-
-  useEffect(() => {
-    const sections = NAV.map(({ id }) => document.getElementById(id)).filter(Boolean)
-    const obs = new IntersectionObserver(
-      entries => {
-        entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id) })
-      },
-      { rootMargin: '-40% 0px -55% 0px' }
-    )
-    sections.forEach(s => obs.observe(s))
-    return () => obs.disconnect()
-  }, [])
-
   return (
     <>
-      <Nav active={active} dark={dark} onToggle={() => setDark(d => !d)} />
+      <Nav />
       <main>
         <Hero />
         <About />
