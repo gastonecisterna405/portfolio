@@ -1,4 +1,55 @@
-/* ─── HERO ENTRANCE ─────────────────────────────────────────────── */
+/* ─── TOKENS ─────────────────────────────────────────────────────── */
+/* Font variables injected by next/font via className on <html> */
+:root {
+  --font-display: Georgia, serif;
+  --font-body:    system-ui, sans-serif;
+  --font-mono:    'Courier New', monospace;
+}
+
+[data-theme="dark"] {
+  --bg-base:       #0F1209;
+  --bg-surface:    #171D10;
+  --bg-surface-2:  #1E2617;
+  --accent:        #8FAF5A;
+  --accent-muted:  #5C7A30;
+  --text-primary:  #E8EDD8;
+  --text-secondary:#7A8A65;
+  --text-tertiary: #4A5A3A;
+  --border:        #2A3420;
+  --border-accent: #3D5228;
+  --nav-bg:        rgba(15, 18, 9, 0.90);
+}
+
+[data-theme="light"] {
+  --bg-base:       #F5F3EC;
+  --bg-surface:    #ECEADE;
+  --bg-surface-2:  #E4E2D6;
+  --accent:        #4A5C28;
+  --accent-muted:  #3A4A1E;
+  --text-primary:  #171D10;
+  --text-secondary:#6B7A54;
+  --text-tertiary: #9AA885;
+  --border:        #D4D5C8;
+  --border-accent: #8FAF5A;
+  --nav-bg:        rgba(245, 243, 236, 0.90);
+}
+
+/* ─── RESET ──────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 18px; }
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s, color 0.3s;
+}
+img { max-width: 100%; display: block; }
+a   { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font: inherit; padding: 0; }
+ul { list-style: none; }
+
+/* ─── HERO ENTRANCE ──────────────────────────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: none; }
@@ -10,7 +61,7 @@
 .hero__ctas      { animation: fadeUp 0.6s ease both; animation-delay: 0.65s; }
 .hero__photo-wrap{ animation: fadeUp 0.7s ease both; animation-delay: 0.30s; }
 
-/* ─── REVEAL ANIMATION ──────────────────────────────────────────── */
+/* ─── REVEAL ANIMATION ───────────────────────────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(22px);
@@ -19,7 +70,7 @@
 }
 .reveal.is-visible { opacity: 1; transform: none; }
 
-/* ─── LAYOUT ────────────────────────────────────────────────────── */
+/* ─── LAYOUT ─────────────────────────────────────────────────────── */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -27,7 +78,7 @@
 }
 .section { padding-block: 100px; }
 
-/* ─── NAV ───────────────────────────────────────────────────────── */
+/* ─── NAV ────────────────────────────────────────────────────────── */
 .nav {
   position: fixed;
   inset: 0 0 auto 0;
@@ -122,7 +173,7 @@
 .nav__mobile-link:hover,
 .nav__mobile-link.nav__link--active { color: var(--accent); }
 
-/* ─── HERO ──────────────────────────────────────────────────────── */
+/* ─── HERO ───────────────────────────────────────────────────────── */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -188,7 +239,7 @@
   border: 1px solid var(--border);
 }
 
-/* ─── BUTTONS ───────────────────────────────────────────────────── */
+/* ─── BUTTONS ────────────────────────────────────────────────────── */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -223,7 +274,7 @@
 }
 .btn--disabled { opacity: 0.45; cursor: not-allowed; transform: none !important; }
 
-/* ─── SECTION HEADER ────────────────────────────────────────────── */
+/* ─── SECTION HEADER ─────────────────────────────────────────────── */
 .section-header {
   display: flex;
   align-items: baseline;
@@ -244,7 +295,7 @@
   color: var(--text-primary);
 }
 
-/* ─── ABOUT ─────────────────────────────────────────────────────── */
+/* ─── ABOUT ──────────────────────────────────────────────────────── */
 .about { background: var(--bg-surface); }
 .about__body {
   max-width: 700px;
@@ -263,7 +314,7 @@
   color: var(--text-primary);
 }
 
-/* ─── EXPERIENCE ────────────────────────────────────────────────── */
+/* ─── EXPERIENCE ─────────────────────────────────────────────────── */
 .timeline {
   padding-left: 32px;
   position: relative;
@@ -363,7 +414,7 @@
   color: var(--text-secondary);
 }
 
-/* ─── RESEARCH ──────────────────────────────────────────────────── */
+/* ─── RESEARCH ───────────────────────────────────────────────────── */
 .research { background: var(--bg-surface); }
 .research__list {
   display: flex;
@@ -425,7 +476,7 @@
 }
 .pub-card__doi:hover { color: var(--accent); border-color: var(--accent); }
 
-/* ─── PROJECTS ──────────────────────────────────────────────────── */
+/* ─── PROJECTS ───────────────────────────────────────────────────── */
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -489,7 +540,7 @@
 }
 .proj-card__link:hover { color: var(--text-primary); }
 
-/* ─── WRITING ───────────────────────────────────────────────────── */
+/* ─── WRITING ────────────────────────────────────────────────────── */
 .writing { background: var(--bg-surface); }
 .writing__list { display: flex; flex-direction: column; }
 .writing__item {
@@ -534,7 +585,7 @@
   transition: transform 0.2s, color 0.2s;
 }
 
-/* ─── CONTACT ───────────────────────────────────────────────────── */
+/* ─── CONTACT ────────────────────────────────────────────────────── */
 .contact__intro {
   font-family: var(--font-body);
   font-size: 1.05rem;
@@ -555,7 +606,7 @@
 }
 .contact__link:hover { color: var(--accent); border-color: var(--accent); }
 
-/* ─── FOOTER ────────────────────────────────────────────────────── */
+/* ─── FOOTER ─────────────────────────────────────────────────────── */
 .footer {
   padding-block: 36px;
   border-top: 1px solid var(--border);
@@ -567,7 +618,7 @@
   color: var(--text-tertiary);
 }
 
-/* ─── RESPONSIVE ────────────────────────────────────────────────── */
+/* ─── RESPONSIVE ─────────────────────────────────────────────────── */
 @media (max-width: 920px) {
   .nav__links { display: none; }
   .nav__hamburger { display: flex; }

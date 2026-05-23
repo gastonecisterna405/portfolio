@@ -1,0 +1,88 @@
+import { Cormorant_Garamond, Space_Grotesk, IBM_Plex_Mono } from 'next/font/google'
+import './globals.css'
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-display',
+  display: 'swap',
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-body',
+  display: 'swap',
+})
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-mono',
+  display: 'swap',
+})
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Gastón Cisterna',
+  jobTitle: 'Senior Deterministic Safety Analyst',
+  description: 'Nuclear Engineer, Physicist, and Lawyer working at the intersection of reactor physics, data science, and energy policy. Operating across Europe and Latin America.',
+  url: 'https://gastoncisterna.dev',
+  email: 'gastonecisterna405@gmail.com',
+  nationality: ['Italian', 'Argentine'],
+  worksFor: { '@type': 'Organization', name: 'AtkinsRéalis' },
+  alumniOf: [
+    { '@type': 'EducationalOrganization', name: 'Instituto Balseiro' },
+    { '@type': 'EducationalOrganization', name: 'Erasmus Mundus NUCPHYS' },
+  ],
+  knowsAbout: [
+    'Nuclear Safety', 'Deterministic Safety Analysis', 'CANDU Reactors',
+    'Thermohydraulic Modeling', 'CATHENA', 'LOCA Analysis',
+    'Machine Learning', 'Radiation Detection', 'Python',
+    'Energy Policy', 'Energy Economics', 'Law',
+  ],
+  sameAs: [
+    'https://www.linkedin.com/in/gastonecisterna/',
+    'https://github.com/gastonecisterna405',
+  ],
+}
+
+export const metadata = {
+  title: 'Gastón Cisterna',
+  description: 'Senior Deterministic Safety Analyst at AtkinsRéalis. Nuclear Engineer, Physicist, and Lawyer working at the intersection of reactor physics, data science, and energy policy.',
+  keywords: ['nuclear safety', 'deterministic safety analysis', 'CANDU', 'thermohydraulics', 'machine learning', 'energy policy', 'nuclear engineering'],
+  authors: [{ name: 'Gastón Cisterna' }],
+  icons: { icon: '/favicon.svg' },
+  openGraph: {
+    type: 'website',
+    title: 'Gastón Cisterna — Nuclear Safety · Law · Energy Policy',
+    description: 'Senior Deterministic Safety Analyst at AtkinsRéalis. Nuclear Engineer, Physicist, and Lawyer.',
+    url: 'https://gastoncisterna.dev',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Gastón Cisterna — Nuclear Safety · Law · Energy Policy',
+    description: 'Senior Deterministic Safety Analyst at AtkinsRéalis. Nuclear Engineer, Physicist, and Lawyer.',
+  },
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html
+      lang="en"
+      data-theme="dark"
+      className={`${cormorant.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
+    >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body>{children}</body>
+    </html>
+  )
+}
