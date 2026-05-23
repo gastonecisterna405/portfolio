@@ -387,6 +387,7 @@ ul { list-style: none; }
   gap: 18px;
 }
 .edu-card {
+  display: block;
   padding: 22px 24px;
   background: var(--bg-surface);
   border: 1px solid var(--border);
