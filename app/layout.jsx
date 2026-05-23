@@ -28,7 +28,7 @@ const jsonLd = {
   '@type': 'Person',
   name: 'Gastón Cisterna',
   jobTitle: 'Senior Deterministic Safety Analyst',
-  description: 'Nuclear Engineer, Physicist, and Lawyer working at the intersection of reactor physics, data science, and energy policy. Operating across Europe and Latin America.',
+  description: 'Data scientist and ML engineer with a background in nuclear physics and engineering. Building machine learning systems for energy and industrial decision-making.',
   url: 'https://gastoncisterna.dev',
   email: 'gastonecisterna405@gmail.com',
   nationality: ['Italian', 'Argentine'],

@@ -18,7 +18,7 @@ export const DATA = {
     "I build machine learning systems and data tools for high-stakes industrial problems. My background is in nuclear engineering and physics, which means I approach data science from the simulation side: I care about what the model actually represents, not just whether the numbers fit.",
     "After graduating from Instituto Balseiro, I spent two years in the Erasmus Mundus NUCPHYS program across Spain, Italy, and France, then joined IFIC Valencia as a researcher. The work was radiation detection and machine learning: building tools to localize radioactive sources in real time. The three journal papers above came out of that.",
     "I'm currently a Senior Safety Analyst at AtkinsRéalis, developing deterministic safety solutions for clients in Canada and the UK. Energy regulation requires someone who understands both the reactor specs and the contract, which is why I'm finishing a law degree.",
-    "The direction I'm working toward is energy economics, geopolitics, and the policy layer that connects technical decisions to political ones. I'm Italian-Argentine and operate between Europe and Latin America. Long game.",
+    "The problems I'm drawn to sit at the boundary between physical models and business decisions: where better simulation or sharper forecasting changes what actually gets built or deployed. I'm Italian-Argentine and operate between Europe and Latin America.",
   ],
 
   experience: [
