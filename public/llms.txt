@@ -1,0 +1,106 @@
+# Gastón Cisterna — gastoncisterna.dev
+
+Nuclear Engineer, Physicist, and Lawyer.
+Senior Deterministic Safety Analyst at AtkinsRéalis.
+Italian-Argentine. Operating across Europe and Latin America.
+
+Positioning: Nuclear Safety · Law · Energy Policy
+
+
+## About
+
+I'm a nuclear engineer and physicist. That combination is not something I planned: it's the result of following each problem wherever it led.
+
+After graduating from Instituto Balseiro, I spent two years in the Erasmus Mundus NUCPHYS program across Spain, Italy, and France, then joined IFIC Valencia as a researcher. The work was radiation detection and machine learning: building tools to localize radioactive sources in real time.
+
+I'm currently a Senior Safety Analyst at AtkinsRéalis, developing deterministic safety solutions for clients in Canada and the UK. Energy regulation requires someone who understands both the reactor specs and the contract, which is why I'm finishing a law degree.
+
+The direction I'm working toward is energy economics, geopolitics, and the policy layer that connects technical decisions to political ones.
+
+
+## Experience
+
+- Senior Deterministic Safety Analyst, AtkinsRéalis (Mar 2025 – Present)
+  Deterministic safety analysis for CANDU reactors. LOCA analysis, SDS1/SDS2 trip coverage, thermohydraulic modeling with CATHENA. Clients in Canada and the UK.
+
+- Researcher, IFIC Valencia (Mar 2024 – Feb 2025)
+  Radiation detection and machine learning. Developed real-time source localization tools for the GN-Vision neutron-gamma imager.
+
+- Data Analyst, ExxonMobil (2020 – 2022)
+  Business analytics and data-driven decision-making in a global energy industry context.
+
+- Research Assistant, LAHN / CNEA (2019 – 2020)
+  Research support at the Latin American Network for Neutron Instrumentation, within the Argentine National Atomic Energy Commission.
+
+
+## Education
+
+- B.Eng. Nuclear Engineering, Instituto Balseiro (National merit scholarship)
+- M.Sc. Nuclear Physics, Erasmus Mundus NUCPHYS (Spain, Italy, France)
+- Law Degree (in progress), Universidad Siglo 21
+
+
+## Research Publications
+
+1. "First experimental results and optimization study of the portable neutron-gamma imager GN-Vision"
+   Applied Radiation and Isotopes, Vol. 224, art. 111826 (2025)
+   DOI: 10.1016/j.apradiso.2025.111826
+
+2. "Imaging neutrons with a position-sensitive monolithic CLYC detector"
+   Nuclear Instruments and Methods in Physics Research A, Vol. 1079, art. 170594 (2025)
+   DOI: 10.1016/j.nima.2025.170594
+
+3. "Experimental proof-of-concept and first field tests of the dual gamma-neutron imager GN-Vision"
+   EPJ Web of Conferences, Vol. 338, art. 09013 (2025)
+   DOI: 10.1051/epjconf/202533809013
+
+
+## Projects
+
+- Global Nuclear Buildout Intelligence
+  AI platform for forecasting reactor deployment and analyzing global nuclear buildout trends.
+  Stack: Python, XGBoost, Streamlit, ML
+  https://github.com/gastonecisterna405/global-nuclear-buildout-intelligence
+
+- Energy Intelligence Platform
+  Energy analytics and forecasting platform combining data visualization, machine learning, and strategic insights.
+  Stack: Python, XGBoost, Streamlit
+  https://github.com/gastonecisterna405/energy-intelligence-platform
+
+- Lead Scoring Mendoza
+  Lead scoring and business analytics platform using Places API, machine learning, and data enrichment.
+  Stack: Python, Streamlit, Google Places API, ML
+  https://github.com/gastonecisterna405/lead-scoring-mendoza
+
+- Estudio Jurídico Barrera
+  Professional website for a law and notary firm.
+  Stack: HTML, CSS, Vercel
+  https://estudio-juridico-barrera.vercel.app/
+
+
+## Writing
+
+- "Entre átomos e inteligencia artificial"
+  Diplomacia Activa, Feb 2026
+  Nuclear energy as critical infrastructure for the AI era.
+  https://diploactiva.com/2026/02/16/entre-atomos-e-inteligencia-artificial
+
+- "La Energía Nuclear en la Crisis Energética: ¿Ángel o Demonio?"
+  Diplomacia Activa, Sep 2023
+  The case for nuclear energy in the global energy transition.
+  https://diploactiva.com/2023/09/19/la-energia-nuclear-en-la-crisis-energetica-angel-o-demonio
+
+
+## Skills
+
+- Nuclear safety analysis: CANDU reactors, LOCA, CATHENA, deterministic methods
+- Machine learning: Python, XGBoost, scikit-learn, data pipelines
+- Radiation detection: neutron-gamma imaging, real-time source localization
+- Law: energy regulation, contracts
+
+
+## Contact
+
+- LinkedIn: https://www.linkedin.com/in/gastonecisterna/
+- GitHub: https://github.com/gastonecisterna405
+- Email: gastonecisterna405@gmail.com
