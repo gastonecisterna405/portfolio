@@ -1,15 +1,15 @@
 # Gastón Cisterna — gastoncisterna.dev
 
+Data scientist and machine learning engineer with a background in nuclear physics and engineering.
 Nuclear Engineer, Physicist, and Lawyer.
-Senior Deterministic Safety Analyst at AtkinsRéalis.
 Italian-Argentine. Operating across Europe and Latin America.
 
-Positioning: Nuclear Safety · Law · Energy Policy
+Positioning: Data, Simulation & Applied AI for Energy and Industrial Decision-Making
 
 
 ## About
 
-I'm a nuclear engineer and physicist. That combination is not something I planned: it's the result of following each problem wherever it led.
+I build machine learning systems and data tools for high-stakes industrial problems. My background is in nuclear engineering and physics, which means I approach data science from the simulation side: I care about what the model actually represents, not just whether the numbers fit.
 
 After graduating from Instituto Balseiro, I spent two years in the Erasmus Mundus NUCPHYS program across Spain, Italy, and France, then joined IFIC Valencia as a researcher. The work was radiation detection and machine learning: building tools to localize radioactive sources in real time.
 
@@ -57,20 +57,20 @@ The direction I'm working toward is energy economics, geopolitics, and the polic
 
 ## Projects
 
-- Global Nuclear Buildout Intelligence
-  AI platform for forecasting reactor deployment and analyzing global nuclear buildout trends.
-  Stack: Python, XGBoost, Streamlit, ML
-  https://github.com/gastonecisterna405/global-nuclear-buildout-intelligence
+- Lead Scoring Mendoza
+  Lead scoring and business analytics platform using Places API, machine learning, and data enrichment for commercial decision-making.
+  Stack: Python, Streamlit, Google Places API, ML
+  https://github.com/gastonecisterna405/lead-scoring-mendoza
 
 - Energy Intelligence Platform
-  Energy analytics and forecasting platform combining data visualization, machine learning, and strategic insights.
+  Energy analytics and forecasting platform combining data visualization, machine learning, and strategic insights for complex energy systems.
   Stack: Python, XGBoost, Streamlit
   https://github.com/gastonecisterna405/energy-intelligence-platform
 
-- Lead Scoring Mendoza
-  Lead scoring and business analytics platform using Places API, machine learning, and data enrichment.
-  Stack: Python, Streamlit, Google Places API, ML
-  https://github.com/gastonecisterna405/lead-scoring-mendoza
+- Global Nuclear Buildout Intelligence
+  AI platform for forecasting reactor deployment and analyzing global nuclear buildout trends. Combines machine learning with strategic energy insights.
+  Stack: Python, XGBoost, Streamlit, ML
+  https://github.com/gastonecisterna405/global-nuclear-buildout-intelligence
 
 - Estudio Jurídico Barrera
   Professional website for a law and notary firm.
@@ -93,14 +93,15 @@ The direction I'm working toward is energy economics, geopolitics, and the polic
 
 ## Skills
 
+- Machine learning: Python, XGBoost, scikit-learn, data pipelines, Streamlit
 - Nuclear safety analysis: CANDU reactors, LOCA, CATHENA, deterministic methods
-- Machine learning: Python, XGBoost, scikit-learn, data pipelines
 - Radiation detection: neutron-gamma imaging, real-time source localization
 - Law: energy regulation, contracts
 
 
 ## Contact
 
+- CV: https://gastoncisterna.dev/cv.pdf
 - LinkedIn: https://www.linkedin.com/in/gastonecisterna/
 - GitHub: https://github.com/gastonecisterna405
 - Email: gastonecisterna405@gmail.com
