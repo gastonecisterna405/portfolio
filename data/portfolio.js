@@ -94,18 +94,26 @@ export const DATA = {
 
   projects: [
     {
+      name:        'RAG System from Scratch',
+      description: 'End-to-end Retrieval-Augmented Generation system built without frameworks. Covers chunking, embeddings, vector search, hybrid BM25 + semantic retrieval, re-ranking, and grounded generation via Ollama. Local, zero-cost stack.',
+      stack:       ['Python', 'sentence-transformers', 'BM25', 'Ollama', 'RAG'],
+      github:      'https://github.com/gastonecisterna405',
+      live:        null,
+      badge:       'In Progress',
+    },
+    {
       name:        'Lead Scoring Mendoza',
       description: 'Lead scoring and business analytics platform using Places API, machine learning, and data enrichment for commercial decision-making.',
       stack:       ['Python', 'Streamlit', 'Google Places API', 'ML'],
       github:      'https://github.com/gastonecisterna405/lead-scoring-mendoza',
-      live:        null,
+      live:        'https://lead-scoring-mendoza.streamlit.app/',
     },
     {
       name:        'Energy Intelligence Platform',
       description: 'Energy analytics and forecasting platform combining data visualization, machine learning, and strategic insights for complex energy systems.',
       stack:       ['Python', 'XGBoost', 'Streamlit'],
       github:      'https://github.com/gastonecisterna405/energy-intelligence-platform',
-      live:        null,
+      live:        'https://energy-intelligence-platform.streamlit.app/',
     },
     {
       name:        'Global Nuclear Buildout Intelligence',

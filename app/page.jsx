@@ -90,7 +90,10 @@ function Projects() {
             <Reveal key={i} delay={i * 80} className="proj-card">
               <div className="proj-card__inner">
                 <div>
-                  <h3 className="proj-card__name">{p.name}</h3>
+                  <div className="proj-card__title-row">
+                    <h3 className="proj-card__name">{p.name}</h3>
+                    {p.badge && <span className="proj-card__badge">{p.badge}</span>}
+                  </div>
                   <p className="proj-card__desc">{p.description}</p>
                 </div>
                 <div className="proj-card__tags">

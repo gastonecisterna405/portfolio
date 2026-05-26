@@ -497,12 +497,30 @@ ul { list-style: none; }
   flex-direction: column;
   gap: 18px;
 }
+.proj-card__title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
 .proj-card__name {
   font-family: var(--font-display);
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--text-primary);
-  margin-bottom: 8px;
+  margin-bottom: 0;
+}
+.proj-card__badge {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: 2px 7px;
+  white-space: nowrap;
+  opacity: 0.85;
 }
 .proj-card__desc {
   font-family: var(--font-body);
