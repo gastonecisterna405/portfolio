@@ -1,4 +1,5 @@
 import { Cormorant_Garamond, Space_Grotesk, IBM_Plex_Mono } from 'next/font/google'
+import LangProvider from '../components/LangProvider'
 import './globals.css'
 
 const cormorant = Cormorant_Garamond({
@@ -73,7 +74,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      data-theme="dark"
+      data-theme="light"
       className={`${cormorant.variable} ${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
     >
       <head>
@@ -82,7 +83,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body><LangProvider>{children}</LangProvider></body>
     </html>
   )
 }

@@ -64,11 +64,22 @@ ul { list-style: none; }
 /* ─── REVEAL ANIMATION ───────────────────────────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-delay: 0ms;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
   transition-delay: var(--delay, 0ms);
 }
-.reveal.is-visible { opacity: 1; transform: none; }
+
+/* variants — hidden state */
+.reveal--fadeUp    { transform: translateY(26px); }
+.reveal--zoom      { transform: scale(0.93) translateY(18px); }
+.reveal--slideLeft { transform: translateX(-48px); }
+.reveal--slideRight{ transform: translateX(40px); }
+.reveal--shrink    { transform: scale(1.06) translateY(-4px); }
 
 /* ─── LAYOUT ─────────────────────────────────────────────────────── */
 .container {
@@ -88,6 +99,20 @@ ul { list-style: none; }
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
   transition: background 0.3s;
+  overflow: hidden;
+}
+
+/* scroll progress bar */
+.nav__progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  transform-origin: left;
+  z-index: 1;
+  pointer-events: none;
 }
 .nav__inner {
   display: flex;
@@ -123,7 +148,19 @@ ul { list-style: none; }
 .nav__link:hover { color: var(--text-primary); }
 .nav__link--active { color: var(--accent); border-bottom-color: var(--accent); }
 
-.nav__actions { display: flex; align-items: center; gap: 12px; }
+.nav__actions { display: flex; align-items: center; gap: 10px; }
+
+.nav__lang-btn {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  color: var(--text-secondary);
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.nav__lang-btn:hover { color: var(--accent); border-color: var(--accent); }
 
 .nav__theme-btn {
   width: 32px; height: 32px;
@@ -179,6 +216,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   padding-top: 64px;
+  overflow: hidden;
 }
 .hero__inner {
   display: grid;

@@ -1,12 +1,14 @@
+'use client'
+
 import Nav    from '../components/Nav'
 import Hero   from '../components/Hero'
 import Reveal from '../components/Reveal'
-import { DATA } from '../data/portfolio'
+import { useLang } from '../components/LangProvider'
 
 // ─── SECTION HEADER ────────────────────────────────────────────────
 function SectionHeader({ title }) {
   return (
-    <Reveal>
+    <Reveal variant="shrink">
       <div className="section-header">
         <h2 className="section-header__title">{title}</h2>
       </div>
@@ -16,13 +18,14 @@ function SectionHeader({ title }) {
 
 // ─── ABOUT ─────────────────────────────────────────────────────────
 function About() {
+  const { t } = useLang()
   return (
     <section id="about" className="section about">
       <div className="container">
-        <SectionHeader title="About" />
+        <SectionHeader title={t.sections.about} />
         <div className="about__body">
-          {DATA.about.map((p, i) => (
-            <Reveal key={i} delay={i * 90}>
+          {t.about.map((p, i) => (
+            <Reveal key={i} delay={i * 100} variant="slideRight">
               <p className="about__para">{p}</p>
             </Reveal>
           ))}
@@ -34,13 +37,14 @@ function About() {
 
 // ─── EXPERIENCE ────────────────────────────────────────────────────
 function Experience() {
+  const { t } = useLang()
   return (
     <section id="experience" className="section">
       <div className="container">
-        <SectionHeader title="Experience" />
+        <SectionHeader title={t.sections.experience} />
         <div className="timeline">
-          {DATA.experience.map((item, i) => (
-            <Reveal key={i} rootMargin="0px 0px -80px 0px" className="timeline__item">
+          {t.experience.map((item, i) => (
+            <Reveal key={i} rootMargin="0px 0px -80px 0px" className="timeline__item" variant="slideLeft">
               <div className="timeline__dot" />
               <h3 className="timeline__role">{item.role}</h3>
               <p className="timeline__meta">
@@ -52,12 +56,12 @@ function Experience() {
             </Reveal>
           ))}
         </div>
-        <Reveal>
-          <h3 className="education__heading">Education</h3>
+        <Reveal variant="shrink">
+          <h3 className="education__heading">{t.sections.education}</h3>
         </Reveal>
         <div className="education__grid">
-          {DATA.education.map((item, i) => (
-            <Reveal key={i} delay={i * 90}>
+          {t.education.map((item, i) => (
+            <Reveal key={i} delay={i * 90} variant="zoom">
               {item.url ? (
                 <a href={item.url} target="_blank" rel="noopener noreferrer" className="edu-card">
                   <p className="edu-card__degree">{item.degree}</p>
@@ -81,13 +85,14 @@ function Experience() {
 
 // ─── PROJECTS ──────────────────────────────────────────────────────
 function Projects() {
+  const { t } = useLang()
   return (
     <section id="projects" className="section">
       <div className="container">
-        <SectionHeader title="Projects" />
+        <SectionHeader title={t.sections.projects} />
         <div className="projects__grid">
-          {DATA.projects.map((p, i) => (
-            <Reveal key={i} delay={i * 80} className="proj-card">
+          {t.projects.map((p, i) => (
+            <Reveal key={i} delay={i * 80} className="proj-card" variant="zoom">
               <div className="proj-card__inner">
                 <div>
                   <div className="proj-card__title-row">
@@ -102,12 +107,12 @@ function Projects() {
                 <div className="proj-card__links">
                   {p.github && (
                     <a href={p.github} target="_blank" rel="noopener noreferrer" className="proj-card__link">
-                      GitHub ↗
+                      {t.links.github}
                     </a>
                   )}
                   {p.live && (
                     <a href={p.live} target="_blank" rel="noopener noreferrer" className="proj-card__link">
-                      Live site ↗
+                      {t.links.liveSite}
                     </a>
                   )}
                 </div>
@@ -122,13 +127,14 @@ function Projects() {
 
 // ─── RESEARCH ──────────────────────────────────────────────────────
 function Research() {
+  const { t } = useLang()
   return (
     <section id="research" className="section research">
       <div className="container">
-        <SectionHeader title="Research" />
+        <SectionHeader title={t.sections.research} />
         <div className="research__list">
-          {DATA.research.map((pub, i) => (
-            <Reveal key={i} delay={i * 90} className="pub-card">
+          {t.research.map((pub, i) => (
+            <Reveal key={i} delay={i * 90} className="pub-card" variant="zoom">
               <div className="pub-card__inner">
                 <div className="pub-card__body">
                   <p className="pub-card__journal">{pub.journal}</p>
@@ -145,7 +151,7 @@ function Research() {
                   rel="noopener noreferrer"
                   className="pub-card__doi"
                 >
-                  DOI ↗
+                  {t.links.doi}
                 </a>
               </div>
             </Reveal>
@@ -158,13 +164,14 @@ function Research() {
 
 // ─── WRITING ───────────────────────────────────────────────────────
 function Writing() {
+  const { t } = useLang()
   return (
     <section id="writing" className="section writing">
       <div className="container">
-        <SectionHeader title="Writing" />
+        <SectionHeader title={t.sections.writing} />
         <div className="writing__list">
-          {DATA.writing.map((item, i) => (
-            <Reveal key={i} delay={i * 80}>
+          {t.writing.map((item, i) => (
+            <Reveal key={i} delay={i * 80} variant="slideLeft">
               <a
                 href={item.url}
                 target="_blank"
@@ -188,35 +195,36 @@ function Writing() {
 
 // ─── CONTACT ───────────────────────────────────────────────────────
 function Contact() {
-  const { linkedin, github, email, whatsapp } = DATA.social
+  const { t, STATIC } = useLang()
+  const { linkedin, github, email, whatsapp } = STATIC.social
   return (
     <section id="contact" className="section">
       <div className="container">
-        <SectionHeader title="Contact" />
+        <SectionHeader title={t.sections.contact} />
         <Reveal>
-          <p className="contact__intro">{DATA.contactIntro}</p>
+          <p className="contact__intro">{t.contactIntro}</p>
         </Reveal>
         <Reveal delay={100}>
           <div className="contact__links">
-            {DATA.cv && (
-              <a href={DATA.cv} className="contact__link" download>
-                Download CV ↗
+            {STATIC.cv && (
+              <a href={STATIC.cv} className="contact__link" download>
+                {t.links.downloadCV}
               </a>
             )}
             {linkedin && (
               <a href={linkedin} target="_blank" rel="noopener noreferrer" className="contact__link">
-                LinkedIn ↗
+                {t.links.linkedin}
               </a>
             )}
             <a href={github} target="_blank" rel="noopener noreferrer" className="contact__link">
-              GitHub ↗
+              {t.links.github}
             </a>
             <a href={`mailto:${email}`} className="contact__link">
-              Email ↗
+              {t.links.email}
             </a>
             {whatsapp && (
               <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="contact__link">
-                WhatsApp ↗
+                {t.links.whatsapp}
               </a>
             )}
           </div>
@@ -239,7 +247,7 @@ function Footer() {
   )
 }
 
-// ─── PAGE (Server Component) ────────────────────────────────────────
+// ─── PAGE ──────────────────────────────────────────────────────────
 export default function Page() {
   return (
     <>
